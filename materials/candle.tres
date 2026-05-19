@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dngotao8axcpl"]
+
+[ext_resource type="Shader" uid="uid://pqp7t1qdn40g" path="res://shaders/toon.gdshader" id="1_pe2y2"]
+[ext_resource type="Texture2D" uid="uid://b5yxptxo5c14o" path="res://textures/color-ramp-iron.png" id="2_yvvm2"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_pe2y2")
+shader_parameter/base_color = Color(0.99999994, 0.8804651, 0.70906746, 1)
+shader_parameter/color_ramp = ExtResource("2_yvvm2")
+shader_parameter/specular_color = Color(1, 1, 1, 1)
+shader_parameter/specular_size = 8.0
+shader_parameter/specular_threshold = 0.5
+shader_parameter/specular_strength = 1.0

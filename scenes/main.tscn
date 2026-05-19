@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://yvcxkbn1pgef"]
+
+[ext_resource type="PackedScene" uid="uid://rqq6mlmmitk4" path="res://models/goblet_01.glb" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://3m5a748w8t0" path="res://models/goblet_02.glb" id="2_tipki"]
+[ext_resource type="PackedScene" uid="uid://kovdbemv4j4" path="res://models/candle_holder_01.glb" id="3_85g3d"]
+[ext_resource type="PackedScene" uid="uid://cqdufqq6bysud" path="res://models/coin_pile_01.glb" id="4_choun"]
+[ext_resource type="PackedScene" uid="uid://wns8x80so5dg" path="res://models/dagger_02.glb" id="5_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://dwbgnoggwawe4" path="res://models/signet_ring_01.glb" id="6_eb6dy"]
+[ext_resource type="PackedScene" uid="uid://ti1ldlnugt11" path="res://models/stack_of_coins_01.glb" id="7_trceg"]
+[ext_resource type="Material" uid="uid://t04plws8uebl" path="res://materials/floor.tres" id="8_a8y0u"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0wfyh"]
+
+[sub_resource type="Environment" id="Environment_tipki"]
+glow_enabled = true
+glow_strength = 1.6
+glow_hdr_threshold = 0.9
+fog_enabled = true
+fog_light_color = Color(0.34117648, 0.48235294, 0.9607843, 1)
+
+[sub_resource type="Animation" id="Animation_85g3d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.196, 0.297, 0.533)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.37524578, -0.28797933, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tipki"]
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.171, 0.232, 0.533), Vector3(0.264, 0.202, 0.533)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.25830874, -0.28797933, 0), Vector3(-0.26703537, 0.2932153, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_85g3d"]
+_data = {
+&"RESET": SubResource("Animation_85g3d"),
+&"default": SubResource("Animation_tipki")
+}
+
+[node name="Node3D" type="Node3D" unique_id=352833999]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=452499835]
+transform = Transform3D(0.9342605, 0.16650204, 0.31533217, -0.35659122, 0.43623134, 0.82616276, 0, -0.88429594, 0.46692687, 0, 0, 0)
+shadow_enabled = true
+shadow_bias = 0.001
+directional_shadow_max_distance = 10.0
+
+[node name="goblet_012" parent="." unique_id=426952467 instance=ExtResource("1_o5qli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06604427, 0, 0.061403677)
+
+[node name="goblet_022" parent="." unique_id=1437831946 instance=ExtResource("2_tipki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15710592, 0, -0.06032005)
+
+[node name="candle_holder_012" parent="." unique_id=463010306 instance=ExtResource("3_85g3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26972255, 0, -0.076801896)
+
+[node name="candle_holder_013" parent="." unique_id=1227204018 instance=ExtResource("3_85g3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, -0.077)
+
+[node name="coin_pile_012" parent="." unique_id=675207153 instance=ExtResource("4_choun")]
+transform = Transform3D(0.90313303, 0, -0.42936078, 0, 1, 0, 0.42936078, 0, 0.90313303, 0.25102836, 0, 0.15547444)
+
+[node name="dagger_022" parent="." unique_id=1967871682 instance=ExtResource("5_ya4ey")]
+transform = Transform3D(0.39540118, -0.9185085, 4.014928e-08, 0, -4.371139e-08, -1, 0.9185085, 0.39540118, -1.7283535e-08, 0.07452595, 0.0021381974, 0.1431047)
+
+[node name="signet_ring_012" parent="." unique_id=1829289795 instance=ExtResource("6_eb6dy")]
+transform = Transform3D(0.7802121, -0.09062105, 0.6189159, 0, 0.9894501, 0.14487429, -0.62551504, -0.11303268, 0.77198094, -0.20124504, 0.0062438585, 0.14716272)
+
+[node name="stack_of_coins_012" parent="." unique_id=1694892896 instance=ExtResource("7_trceg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.069531575, 0, 0.0426407)
+
+[node name="stack_of_coins_013" parent="." unique_id=559815970 instance=ExtResource("7_trceg")]
+transform = Transform3D(0.0745436, 0, 0.9972178, 0, 1, 0, -0.9972178, 0, 0.0745436, -0.31763163, 0, 0.04725492)
+
+[node name="floor" type="MeshInstance3D" parent="." unique_id=1603948578]
+transform = Transform3D(1, 0, 0, 0, 0.9999914, 0.0041364185, 0, -0.0041364185, 0.9999914, -0.0006111264, -0.0022893548, 0.0017999411)
+material_override = ExtResource("8_a8y0u")
+mesh = SubResource("PlaneMesh_0wfyh")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=216007295]
+environment = SubResource("Environment_tipki")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2047295618]
+transform = Transform3D(0.95881975, 0.10409197, -0.2642529, 0, 0.9304176, 0.3665012, 0.28401536, -0.3514086, 0.8921028, -0.196, 0.297, 0.533)
+fov = 50.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D" unique_id=482195669]
+libraries/ = SubResource("AnimationLibrary_85g3d")
+autoplay = &"default"

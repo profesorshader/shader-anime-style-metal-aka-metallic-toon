@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://do5x7kuypqnef"]
+
+[ext_resource type="Shader" uid="uid://b33wtmb0pxtf0" path="res://shaders/toon_metal.gdshader" id="1_n2r5n"]
+[ext_resource type="Texture2D" uid="uid://b5yxptxo5c14o" path="res://textures/color-ramp-iron.png" id="2_n2r5n"]
+[ext_resource type="Texture2D" uid="uid://586u7bpfy0fc" path="res://textures/noise_warp.png" id="3_x8mcl"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_n2r5n")
+shader_parameter/base_color = Color(1, 1, 1, 1)
+shader_parameter/color_ramp = ExtResource("2_n2r5n")
+shader_parameter/specular_color = Color(1, 1, 1, 1)
+shader_parameter/specular_size = 8.0
+shader_parameter/specular_threshold = 0.5
+shader_parameter/specular_strength = 1.0
+shader_parameter/noise_tex = ExtResource("3_x8mcl")
+shader_parameter/noise_pow = 2.0
+shader_parameter/noise_scl = 0.25
+shader_parameter/rim_pow = 4.0
+shader_parameter/rim_str = 5.0
